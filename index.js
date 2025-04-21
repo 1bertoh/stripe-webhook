@@ -27,5 +27,9 @@ app.post('/webhook', express.json({type: 'application/json'}), (request, respons
   // Return a response to acknowledge receipt of the event
   response.json({received: true});
 });
+app.get('/teste', express.json({type: 'application/json'}), (request, response) => {
+  
+  response.json({status: 'working'});
+});
 
 app.listen(4242, () => console.log('Running on port 4242'));
